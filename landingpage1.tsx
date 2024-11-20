@@ -38,7 +38,6 @@ export default function LandingPage() {
     { name: "Emily Chen", role: "Nightclub Owner", image: "/placeholder.svg", quote: "Running a successful nightclub requires having the best talent, and Patterned delivers every time. The 'Last Call' feature has been a lifesaver for last-minute staffing needs. The caliber of professionals we've hired through Patterned has elevated our venue's reputation and customer experience." },
   ]
 
-  // New job opportunities data
   const jobOpportunities = [
     { title: "Bartender", venue: "Skyline Lounge", location: "New York, NY", image: "/placeholder.svg" },
     { title: "DJ", venue: "Club Neon", location: "Los Angeles, CA", image: "/placeholder.svg" },
@@ -112,7 +111,6 @@ export default function LandingPage() {
         </button>
       </header>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className={`fixed inset-0 ${viewMode === 'talent' ? 'bg-black' : 'bg-white'} z-40 lg:hidden pt-20`}>
           <nav className="flex flex-col items-center gap-8 p-8">
@@ -134,7 +132,6 @@ export default function LandingPage() {
       )}
 
       <main className="flex-1 pt-20">
-        {/* Hero Section */}
         <section className="w-full py-20 md:py-32 lg:py-48 xl:py-64 relative overflow-hidden">
           <div className={`absolute inset-0 ${viewMode === 'talent' ? 'bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%)]' : 'bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.8)_100%)]'}`} />
           <div className="container px-6 md:px-10 relative">
@@ -212,7 +209,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Logo Slider */}
         <section className={`w-full py-16 border-t ${viewMode === 'talent' ? 'border-gray-800' : 'border-gray-200'}`}>
           <div className="container px-6 md:px-10 overflow-hidden">
             <div className="flex flex-col items-center justify-center space-y-8">
@@ -236,7 +232,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Features Section */}
         <section className={`w-full py-20 md:py-32 ${viewMode === 'talent' ? 'bg-zinc-900' : 'bg-gray-100'}`} id="features">
           <div className="container px-6 md:px-10 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-8 text-center mb-16">
@@ -281,7 +276,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* How It Works Section */}
         <section className={`w-full py-20 md:py-32 ${viewMode === 'talent' ? 'bg-gradient-to-b from-black to-zinc-900' : 'bg-gradient-to-b from-white to-gray-100'}`} id="how-it-works">
           <div className="container px-6 md:px-10 mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-center mb-16">How Patterned Works</h2>
@@ -331,7 +325,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Job Opportunities Section */}
         <section className={`w-full py-20 md:py-32 ${viewMode === 'talent' ? 'bg-black' : 'bg-white'}`} id="job-opportunities">
           <div className="container px-6 md:px-10 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-8 text-center mb-16">
@@ -373,7 +366,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
         <section className={`w-full py-20 md:py-32 ${viewMode === 'talent' ? 'bg-black' : 'bg-white'}`} id="testimonials">
           <div className="container px-6 md:px-10 mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-center mb-16">Success Stories</h2>
@@ -402,7 +394,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className={`w-full py-20 md:py-32 ${viewMode === 'talent' ? 'bg-gradient-to-t from-zinc-900 to-black' : 'bg-gradient-to-t from-gray-100 to-white'}`}>
           <div className="container px-6 md:px-10 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
@@ -443,4 +434,9 @@ export default function LandingPage() {
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
           <div className="flex items-center mb-8 lg:mb-0">
             <Image src="/edit logog o ball 2.png" alt="Patterned Logo" width={40} height={40} />
-            <span className={`text-3xl font
+            <span className={`text-3xl font-bold ml-2 ${textColor}`}>Patterned</span>
+          </div>
+          <nav className="flex flex-wrap justify-center lg:justify-end gap-8">
+            <Link href="#" className={`${textColor} hover:${accentColor} transition-colors`}>About Us</Link>
+            <Link href="#" className={`${textColor} hover:${accentColor} transition-colors`}>Careers</Link>
+            <Link href="#" className={
